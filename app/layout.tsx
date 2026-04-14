@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shadcn-studio/blocks/navbar-component-01/navbar-component-01";
-import Footer from "@/components/shadcn-studio/blocks/footer-component-01/footer-component-01";
 import ServiceWorkerWrapper from "@/components/service-worker-wrapper";
 
 const geistSans = Geist({
@@ -39,16 +38,12 @@ const navigationData = [
     logo: true,
   },
   {
+    title: "Leaderboards",
+    href: "/settings", // placeholder for now since the leaderboards page isn't ready yet
+  },
+  {
     title: "Settings",
     href: "/settings",
-  },
-  {
-    title: "Profile",
-    href: "/profile",
-  },
-  {
-    title: "Login",
-    href: "/login",
   },
 ];
 
@@ -63,7 +58,6 @@ export default function RootLayout({
         <ServiceWorkerWrapper>
           <Navbar navigationData={navigationData} />
           <main>{children}</main>
-          <Footer />
         </ServiceWorkerWrapper>
       </body>
     </html>
