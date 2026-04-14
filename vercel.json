@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "app/api/ytmusic/test.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "app/api/ytmusic/test.py"
+        }
+    ]
+}
